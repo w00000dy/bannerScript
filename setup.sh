@@ -20,7 +20,7 @@ rm -f /etc/ssh/neofetch.conf
 cp -v config.conf /etc/ssh/neofetch.conf
 
 printf "${lightCyan}Passe SSH-Konfiguration (/etc/ssh/sshd_config) an${NC}\n"
-echo 'Banner /etc/ssh/banner' >> /etc/ssh/sshd_config
+sed -i 's/#Banner none/Banner \/etc\/ssh\/banner/g' /etc/ssh/sshd_config
 
 printf "${lightCyan}Starte SSH Service neu${NC}\n"
 systemctl restart ssh.service

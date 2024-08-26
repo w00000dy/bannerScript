@@ -3,13 +3,29 @@
 lightCyan='\033[1;36m'
 NC='\033[0m' # No Color
 
+skip_fastfetch=""
+
+# Loop through all parameters
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --skip_fastfetch) # If the parameter --long is found
+            skip_fastfetch="1"
+            ;;
+    esac
+    shift # Jump to the next argument
+done
+
 printf "${lightCyan}Uninstall neofetch${NC}\n"
 apt remove neofetch -y
 
-printf "${lightCyan}Install fastfetch${NC}\n"
-apt install software-properties-common -y
-add-apt-repository ppa:zhangsongcui3371/fastfetch -y
-apt install fastfetch -y
+if [[ "$skip_fastfetch" == "1" ]]; then
+  printf "${lightCyan}Install fastfetch${NC}\n"
+  apt install software-properties-common -y
+  add-apt-repository ppa:zhangsongcui3371/fastfetch -y
+  apt install fastfetch -y
+else
+  printf "${lightCyan}Skip fastfetch installation${NC}\n"
+fi
 
 printf "${lightCyan}Remove /etc/update-motd.d/01-neofetch file${NC}\n"
 rm -f /etc/update-motd.d/01-neofetch

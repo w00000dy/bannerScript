@@ -1,4 +1,0 @@
-#!/bin/bash
-
-printf "\n"
-neofetch --config /etc/ssh/neofetch.conf

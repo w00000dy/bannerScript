@@ -31,4 +31,4 @@ Dieses Skript erstellt automatisch einen Banner vor und nach der Anmeldung.
 >./setup.sh
 >```
 ## Dependencies 🤞
-- [Neofetch](https://github.com/dylanaraps/neofetch)
+- [Fastfetch]([https://github.com/dylanaraps/neofetch](https://github.com/fastfetch-cli/fastfetch))

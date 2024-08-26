@@ -1,6 +1,7 @@
 #!/bin/bash
 
 lang="en"
+remaining_args=()
 
 # Loop through all parameters
 while [[ "$#" -gt 0 ]]; do
@@ -8,6 +9,9 @@ while [[ "$#" -gt 0 ]]; do
         --lang) # If the parameter --long is found
             lang="$2" # Take the next parameter as the value for long
             shift # Shift the arguments to skip the value
+            ;;
+        *) # All other parameters are collected
+            remaining_args+=("$1")
             ;;
     esac
     shift # Jump to the next argument
@@ -22,4 +26,4 @@ tar -xf master.tar.gz
 cd bannerScript-master/
 mv banner-$lang banner
 chmod +x setup.sh
-./setup.sh
+./setup.sh "${remaining_args[@]}"

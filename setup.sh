@@ -15,7 +15,7 @@ rm -f /etc/update-motd.d/01-neofetch
 
 printf "${lightCyan}Create /etc/update-motd.d/01-fastfetch file${NC}\n"
 rm -f /etc/update-motd.d/01-fastfetch
-cp -v 01-neofetch /etc/update-motd.d/01-fastfetch
+cp -v 01-fastfetch /etc/update-motd.d/01-fastfetch
 chmod 755 /etc/update-motd.d/01-fastfetch
 
 printf "${lightCyan}Create /etc/ssh/banner file${NC}\n"

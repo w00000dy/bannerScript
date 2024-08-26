@@ -2,33 +2,29 @@
 
 This script automatically creates a banner before and after login.
 
+## Usage ⏯️
+
+### Ubuntu 22.04 or newer:
+
+1. Run this command:
+> ```
+> wget https://raw.githubusercontent.com/w00000dy/bannerScript/master/install.sh -O /tmp/bannerScriptInstall.sh && bash /tmp/bannerScriptInstall.sh
+> ```
+
+### Ubuntu 20.04 or newer and Debian 11 or newer:
+
+1. Download and Install [Fastfetch](https://github.com/fastfetch-cli/fastfetch#installation)
+2. Run this command:
+> ```
+> wget https://raw.githubusercontent.com/w00000dy/bannerScript/master/install.sh -O /tmp/bannerScriptInstall.sh && bash /tmp/bannerScriptInstall.sh --skip_fastfetch
+> ```
+
+
 ## Images 🖼️
 <a href="https://ibb.co/r2NR1yF"><img src="https://i.ibb.co/DfTHSKz/Unbenannt.png" alt="Unbenannt" border="0"></a>
 
 <a href="https://ibb.co/6mS4NpB"><img src="https://i.ibb.co/rmhZvLs/Unbenannt.png" alt="Unbenannt" border="0"></a>
 
-## Usage ⏯️
 
-1. [Download](https://github.com/WoodyLetsCode/bannerSkript/releases/latest) script
-2. Unzip file
->```
->unzip bannerSkript-1.0.0.zip
->```
->or
->```
->tar -xf bannerSkript-1.0.0.tar.gz
->```
-3. Navigate to the folder
->```
->cd bannerSkript-1.0.0/
->```
-4. Make script executable
->```
->chmod +x setup.sh 
->```
-5. Execute script
->```
->./setup.sh
->```
 ## Dependencies 🤞
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)

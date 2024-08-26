@@ -4,6 +4,7 @@ lightCyan='\033[1;36m'
 NC='\033[0m' # No Color
 
 skip_fastfetch=""
+echo "args\n"
 echo "$@"
 # Loop through all parameters
 while [[ "$#" -gt 0 ]]; do

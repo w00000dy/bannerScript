@@ -7,6 +7,7 @@ printf "${lightCyan}Uninstall neofetch${NC}\n"
 apt remove neofetch -y
 
 printf "${lightCyan}Install fastfetch${NC}\n"
+apt install software-properties-common -y
 add-apt-repository ppa:zhangsongcui3371/fastfetch -y
 apt install fastfetch -y
 

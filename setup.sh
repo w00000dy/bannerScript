@@ -22,7 +22,6 @@ if [[ "$skip_fastfetch" == "1" ]]; then
     printf "${lightCyan}Skip fastfetch installation${NC}\n"
 else
     printf "${lightCyan}Install fastfetch${NC}\n"
-    apt install software-properties-common -y
     add-apt-repository ppa:zhangsongcui3371/fastfetch -y
     apt install fastfetch -y
 fi
